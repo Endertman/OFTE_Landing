@@ -4,6 +4,11 @@ const bottomLinks = [
     header: 'Social',
     links: [
       {
+      name: 'Instagram',
+      href: 'https://www.instagram.com/ofte_unab/',
+      isExternal: true,
+      },
+      {
         name: 'Github',
         href: 'https://github.com/',
         isExternal: true,
@@ -11,11 +16,6 @@ const bottomLinks = [
       {
         name: 'Twitter',
         href: 'https://twitter.com/',
-        isExternal: true,
-      },
-      {
-        name: 'Instagram',
-        href: 'https://instagram.com/',
         isExternal: true,
       },
       {
@@ -29,22 +29,22 @@ const bottomLinks = [
     header: 'Company',
     links: [
       {
-        name: 'Home',
+        name: 'Inicio',
         href: '/',
         isExternal: false,
       },
       {
-        name: 'About',
+        name: 'Sobre nosotros',
         href: '/about',
         isExternal: false,
       },
       {
-        name: 'Pricing',
+        name: 'Page 1',
         href: '/pricing',
         isExternal: false,
       },
       {
-        name: 'Contact',
+        name: 'Contacto',
         href: '/contact',
         isExternal: false,
       },
@@ -85,14 +85,13 @@ const bottomLinks = [
           class="h-8 w-auto"
           width="65"
           height="40"
-          :src="$store.theme.isDark ? '/assets/logo-inverted.svg' : '/assets/logo.svg'"
-          alt="Stone"
+          :src="$store.theme.isDark ? '/assets/logo-inverted.png' : '/assets/logo.png'"
+          alt="OFTE"
         />
         <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
-          Stone is a premium Astro theme specially designed for Business, Marketing, SaaS and
-          Startup websites.
+          Organización de Física Teórica y Experimental - OFTE
         </p>
-        <p class="text-primary-950/70 dark:text-primary-200/70 text-sm">© 2023 Stone</p>
+        <p class="text-primary-950/70 dark:text-primary-200/70 text-sm">© 2025 OFTE</p>
       </div>
 
       <!-- Bottom links -->
