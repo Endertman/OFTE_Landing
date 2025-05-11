@@ -24,29 +24,29 @@ const links = [
 
 const socials = [
   {
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>`,
+    icon: 'instagram',
     name: 'Instagram',
-    handle: '@ofte',
+    handle: '@ofte_unab',
     url: 'https://www.instagram.com/ofte_unab/',
   },
   {
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>`,
+    icon: 'instagram',
     name: 'Instagram',
-    handle: '@ofte',
-    url: 'https://www.instagram.com/ofte_unab/',
+    handle: '@cefis.unab',
+    url: 'https://www.instagram.com/cefis.unab/',
   },
   {
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>`,
+    icon: 'instagram',
     name: 'Instagram',
-    handle: '@ofte',
-    url: 'https://www.instagram.com/ofte_unab/',
+    handle: '@uandresbello',
+    url: 'https://www.instagram.com/uandresbello/',
   },
   {
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>`,
+    icon: 'instagram',
     name: 'Instagram',
-    handle: '@ofte',
-    url: 'https://www.instagram.com/ofte_unab/',
-  },
+    handle: '@ciencias exactas unab',
+    url: 'https://www.instagram.com/cienciasexactasunab/',
+  }
 ];
 
 ---
@@ -160,15 +160,17 @@ const socials = [
     x-collapse
     x-collapse.duration.500ms
   >
-    <div class="grid grid-cols-1 gap-16 pb-24 pt-6 lg:grid-cols-2 lg:pt-12 items-center justify-center">
+    <div class="grid grid-cols-1 gap-8 pt-6 lg:grid-cols-2 lg:pt-12 items-center justify-center">
       <div class="bg-primary-500/10 dark:bg-primary-400/10 items-center justify-center rounded-3xl px-8 py-12 w-full">
         <div class="grid grid-cols-2 gap-4 w-full">
           {socials.map((social) => (
             <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col rounded-3xl px-8 py-8 items-center text-center">
               <a href={social.url} target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform">
-                <div class="w-10 h-10 text-primary-500 dark:text-primary-400 flex items-center justify-center" set:html={social.icon} />
+                <svg class="w-10 h-10 text-primary-500 dark:text-primary-400" aria-hidden="true" viewBox="0 0 24 24">
+                  <use href={`/assets/sprite.svg#${social.icon}`} />
+                </svg>
               </a>
-              <p class="text-lg font-medium">{social.handle}</p>
+              <p class="text-xs sm:text-sm md:text-base font-medium break-words">{social.handle}</p>
             </div>
           ))}
         </div>
